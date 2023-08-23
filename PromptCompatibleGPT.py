@@ -30,6 +30,9 @@ import time
 import sys
 
 openai.api_key = "YOUR_KEY"
+for x in sys.argv:
+    if x.startswith("API_KEY="):
+        openai.api_key = x.split("API_KEY=")[1]
 relevantViewSize = 30
 recentViewSize = 10
 filename = "mem.json" #the system's memory file

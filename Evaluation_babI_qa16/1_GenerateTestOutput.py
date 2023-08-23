@@ -3,12 +3,12 @@ import os
 cwd = os.getcwd()
 sys.path.append(cwd + "/../")
 os.chdir(cwd + "/../")
-from NarsGPT import *
+from PromptCompatibleGPT import *
 os.chdir(cwd)
 import json
 
-lines = ""
-with open("/home/tc/babI/tasks_1-20_v1-2/en-valid/qa16_train.txt") as f:
+lines = ""#"../../babI/task_16_v1-2/en-valid/qa16_test.txt"
+with open("../../babI/task_16_v1-2/en-valid/qa16_train.txt") as f:
     lines = f.read().split("\n")
 
 lastnum = -1
